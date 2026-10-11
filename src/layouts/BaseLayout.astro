@@ -1,0 +1,35 @@
+---
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+const {
+  title = "Bank of Mince",
+  description = "The central bank and treasury of the Mince economy."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} | Bank of Mince</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <strong>Bank of Mince</strong>
+        <p>Monetary Authority &amp; Treasury</p>
+        <p>Official publications and economic information.</p>
+      </div>
+    </footer>
+  </body>
+</html>

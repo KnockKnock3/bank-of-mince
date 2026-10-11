@@ -1,0 +1,86 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { currentPolicies, announcements } from "../data/policy.js";
+---
+
+<BaseLayout title="Monetary Policy">
+  <section class="hero">
+    <p class="eyebrow">THE BANK OF MINCE</p>
+    <h1>Policy &amp; Announcements</h1>
+    <p class="lead">
+      Current policy settings, taxation rules and official
+      announcements from the Bank of Mince.
+    </p>
+  </section>
+
+  <section class="section" id="current-policies">
+    <p class="eyebrow">CURRENT POLICIES</p>
+    <h2>Policies in force</h2>
+    <p class="muted">
+      A summary of current rates and economic policy settings.
+    </p>
+
+    <div class="grid">
+      {currentPolicies.map((policy) => (
+        <article class="card policy-card">
+          <p class="eyebrow">{policy.category}</p>
+          <h3>{policy.name}</h3>
+          <p class="stat">{policy.value}</p>
+          <p>{policy.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" id="announcements">
+    <p class="eyebrow">OFFICIAL RECORD</p>
+    <h2>Announcements &amp; statements</h2>
+    <p class="muted">
+      A record of policy announcements and official statements
+      issued by the Bank.
+    </p>
+
+    <div class="announcement-feed">
+      {announcements.map((announcement) => (
+        <article
+          class="card announcement"
+          id={announcement.id}
+        >
+          <div class="announcement-meta">
+            <span class="announcement-category">
+              {announcement.category}
+            </span>
+            <time>{announcement.date}</time>
+          </div>
+
+          <h3>{announcement.title}</h3>
+          <p>{announcement.summary}</p>
+
+          {announcement.content !== announcement.summary && (
+            <div class="announcement-content">
+              <p>{announcement.content}</p>
+            </div>
+          )}
+
+          <a href={`#${announcement.id}`}>
+            Permalink to this announcement →
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section" id="official-documents">
+    <p class="eyebrow">GOVERNANCE</p>
+    <h2>Official documents</h2>
+    <div class="card">
+      <h3>Charter of the Bank</h3>
+      <p>
+        The rules, responsibilities and authority under which
+        the Bank of Mince operates.
+      </p>
+      <a href="/charter/">Read the Bank's charter →</a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,16 +1,91 @@
 ---
----
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { announcements } from "../data/policy.js";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+const latestAnnouncement = announcements[0];
+---
+<BaseLayout title="Home">
+  <section class="hero">
+    <p class="eyebrow">Monetary Authority &amp; Treasury</p>
+    <h1>Bank of Mince</h1>
+    <p class="lead">
+      Official economic statistics, monetary policy,
+      public finance and announcements from the Bank of Mince.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Economic overview</h2>
+    <p>Test indicators · Updated 10 October 2026</p>
+
+    <div class="grid">
+      <article class="card">
+        <h3>4 Week Bond interest rate</h3>
+        <p class="stat">3 Beef per week</p>
+      </article>
+
+      <article class="card">
+        <h3>Inflation</h3>
+        <p class="stat">2.4% per week</p>
+      </article>
+
+      <article class="card">
+        <h3>Treasury balance</h3>
+        <p class="stat">1000 Beef</p>
+      </article>
+    </div>
+  </section>
+
+  
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">FROM THE BANK</p>
+      <h2>Latest announcement</h2>
+    </div>
+    <a href="/policy/#announcements">All announcements →</a>
+  </div>
+
+  {latestAnnouncement && (
+    <article class="card latest-announcement">
+      <div class="announcement-meta">
+        <span class="announcement-category">
+          {latestAnnouncement.category}
+        </span>
+        <time>{latestAnnouncement.date}</time>
+      </div>
+
+      <h3>{latestAnnouncement.title}</h3>
+      <p>{latestAnnouncement.summary}</p>
+
+      <a href={`/policy/#${latestAnnouncement.id}`}>
+        Read the full announcement →
+      </a>
+    </article>
+  )}
+</section>
+
+  <section class="section">
+    <h2>Explore the Bank</h2>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Monetary policy</h3>
+        <p>Interest rates, policy decisions and the Bank's charter.</p>
+        <a href="/policy/">Explore policy →</a>
+      </article>
+
+      <article class="card">
+        <h3>Treasury</h3>
+        <p>Public finances, taxation and government spending.</p>
+        <a href="/treasury/">Explore the treasury →</a>
+      </article>
+
+      <article class="card">
+        <h3>Statistics</h3>
+        <p>Economic indicators, historical data and reports.</p>
+        <a href="/statistics/">Explore statistics →</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
