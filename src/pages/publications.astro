@@ -1,0 +1,126 @@
+
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  economicReports,
+  meetingMinutes,
+  researchPapers,
+  formatPublicationDate,
+} from "../data/publications.js";
+
+const sortByDate = (items: any) =>
+  [...items].sort((a, b) => b.date.localeCompare(a.date));
+
+const reports = sortByDate(economicReports);
+const minutes = sortByDate(meetingMinutes);
+const papers = sortByDate(researchPapers);
+---
+
+<BaseLayout title="Publications & Records">
+  <section class="hero">
+    <p class="eyebrow">BANK OF MINCE</p>
+    <h1>Publications &amp; Records</h1>
+    <p class="lead">
+      Published economic reports, meeting minutes and official
+      records of the Bank of Mince.
+    </p>
+  </section>
+
+  <section class="section" id="economic-reports">
+    <p class="eyebrow">ECONOMIC RESEARCH</p>
+    <h2>Economic Reports</h2>
+    <p class="muted">
+      Reports on economic conditions, monetary developments and
+      the state of the server economy.
+    </p>
+
+    <div class="announcement-feed">
+      {reports.map((report) => (
+        <article class="card announcement publication" id={report.id}>
+          <div class="announcement-meta">
+            <span class="announcement-category">{report.category}</span>
+            <time datetime={report.date}>
+              {formatPublicationDate(report.date)}
+            </time>
+          </div>
+
+          <h3>{report.title}</h3>
+
+          <div class="publication-links">
+            <a href={report.url} target="_blank" rel="noopener noreferrer">
+              Read report →
+            </a>
+          </div>
+        </article>
+      ))}
+
+      {reports.length === 0 && (
+        <p class="muted">No economic reports have been published yet.</p>
+      )}
+    </div>
+
+    <h2>Reserach Papers</h2>
+    <p class="muted">
+      Papers documenting research into economic questions, potential monetary reforms, taxation systems or proposals for future development.
+    </p>
+
+    <div class="announcement-feed">
+      {papers.map((paper) => (
+        <article class="card announcement publication" id={paper.id}>
+          <div class="announcement-meta">
+            <span class="announcement-category">{paper.category}</span>
+            <time datetime={paper.date}>
+              {formatPublicationDate(paper.date)}
+            </time>
+          </div>
+
+          <h3>{paper.title}</h3>
+
+          <div class="publication-links">
+            <a href={paper.url} target="_blank" rel="noopener noreferrer">
+              Read report →
+            </a>
+          </div>
+        </article>
+      ))}
+
+      {papers.length === 0 && (
+        <p class="muted">No research papers have been published yet :(</p>
+      )}
+    </div>
+  </section>
+
+  <section class="section" id="meeting-minutes">
+    <p class="eyebrow">GOVERNANCE &amp; OVERSIGHT</p>
+    <h2>Meeting Minutes</h2>
+    <p class="muted">
+      Records of economic summits, policy coordination meetings and
+      other official meetings.
+    </p>
+
+    <div class="announcement-feed">
+      {minutes.map((meeting) => (
+        <article class="card announcement publication" id={meeting.id}>
+          <div class="announcement-meta">
+            <span class="announcement-category">{meeting.category}</span>
+            <time datetime={meeting.date}>
+              {formatPublicationDate(meeting.date)}
+            </time>
+          </div>
+
+          <h3>{meeting.title}</h3>
+
+          <div class="publication-links">
+            <a href={meeting.url} target="_blank" rel="noopener noreferrer">
+              Read minutes →
+            </a>
+          </div>
+        </article>
+      ))}
+
+      {minutes.length === 0 && (
+        <p class="muted">No meeting minutes have been published yet.</p>
+      )}
+    </div>
+  </section>
+</BaseLayout>

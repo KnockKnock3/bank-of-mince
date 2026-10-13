@@ -6,7 +6,7 @@ import { currentPolicies, announcements } from "../data/policy.js";
 
 <BaseLayout title="Monetary Policy">
   <section class="hero">
-    <p class="eyebrow">THE BANK OF MINCE</p>
+    <p class="eyebrow">BANK OF MINCE</p>
     <h1>Policy &amp; Announcements</h1>
     <p class="lead">
       Current policy settings, taxation rules and official
@@ -62,10 +62,6 @@ import { currentPolicies, announcements } from "../data/policy.js";
               <p>{announcement.content}</p>
             </div>
           )}
-
-          <a href={`#${announcement.id}`}>
-            Permalink to this announcement →
-          </a>
         </article>
       ))}
     </div>

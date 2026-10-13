@@ -1,26 +1,670 @@
+
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="About">
-  <p class="eyebrow">The Bank of Mince</p>
-  <h1>About</h1>
-
-  <p class="lead">
-    About
-  </p>
-
-  <section class="section">
-    <h2>Contact</h2>
-    <p>
-      Go away
+  <section class="hero">
+    <p class="eyebrow">BANK OF MINCE</p>
+    <h1>About the Bank</h1>
+    <p class="lead">
+      The Bank of Mince is central monetary authority responsible for monetary policy,
+      treasury management, economic stability and the development of
+      the server economy.
     </p>
   </section>
 
-  <section class="section">
-    <h2>Glossary</h2>
+  <section class="section" id="about-the-bank">
+    <h2>About the Bank of Mince</h2>
     <p>
-      Terms
+      The Bank of Mince serves as the central monetary authority of
+      the server economy. Its responsibilities are to manage state
+      reserves, administer taxation, issue financial instruments,
+      monitor economic conditions and publish official economic
+      statistics and reports.
     </p>
+    <p>
+      The Bank aims to maintain a stable and functional economy,
+      preserve the value of the currency, encourage the exchange of
+      goods and services, and support sustainable economic development.
+      Its powers, responsibilities and governance are established by
+      the <a href="/charter/">Charter of the Bank of Mince</a>.
+    </p>
+    <p>
+      The Bank publishes economic reports, monetary policy announcements,
+      meeting minutes and research papers to promote transparency and
+      provide players with information about the state of the economy.
+    </p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Questions, proposals and concerns regarding monetary policy,
+      taxation, financial services or the operation of the Bank may
+      be raised with the Governor or at the relevant discussions.
+    </p>
+    <p>
+      Players may also raise policy proposals and motions through the
+      public oversight mechanisms established in the <a href="/charter/#section-vii">Charter's governance provisions</a>.
+    </p>
+  </section>
+
+  <section class="section" id="glossary">
+    <p class="eyebrow">REFERENCE</p>
+    <h2>Glossary of Economic Terms</h2>
+    <p class="muted">
+      Definitions of terms used in the Bank's publications, monetary
+      policy announcements, financial services and economic reports.
+    </p>
+
+    <nav class="glossary-index card" aria-label="Glossary contents">
+      <h3>Contents</h3>
+      <ul>
+        <li><a href="#currency">Currency and Money</a></li>
+        <li><a href="#economic-indicators">Economic Indicators</a></li>
+        <li><a href="#taxation">Taxation and Production</a></li>
+        <li><a href="#banking">Banking and the Treasury</a></li>
+        <li><a href="#bonds">Bonds and Debt</a></li>
+        <li><a href="#loans">Loans and Lending</a></li>
+        <li><a href="#policy">Monetary Policy</a></li>
+        <li><a href="#governance">Governance and Publications</a></li>
+      </ul>
+    </nav>
+
+    <div class="glossary-group" id="currency">
+      <h3>Currency and Money</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-currency">
+          <dt>Currency</dt>
+          <dd>
+            A medium of exchange used to purchase goods and services,
+            settle debts and transfer wealth between players. Raw Beef
+            is the official state currency under the current Charter.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-circulation">
+          <dt>Currency in Circulation</dt>
+          <dd>
+            The total amount of currency currently held or used by
+            players and businesses outside the Bank's own reserves.
+            It measures the money available for transactions in the
+            wider economy.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-money-supply">
+          <dt>Money Supply</dt>
+          <dd>
+            The total amount of money included within a defined measure
+            of the economy.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-liquidity">
+          <dt>Liquidity</dt>
+          <dd>
+            The ease with which an asset can be used or converted into
+            currency for spending. Currency is highly liquid, while
+            assets that are difficult to sell or exchange are less liquid.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-reserves">
+          <dt>Reserves</dt>
+          <dd>
+            Currency and other assets held by the Bank to support its
+            operations, meet obligations and respond to economic
+            disturbances. Reserves may include currency, financial
+            claims and strategic assets.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-full-reserve-backing">
+          <dt>Full Reserve Backing</dt>
+          <dd>
+            The principle that the Bank's relevant monetary liabilities
+            are backed by sufficient declared reserves.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="economic-indicators">
+      <h3>Economic Indicators</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-inflation">
+          <dt>Inflation</dt>
+          <dd>
+            An increase in the general price level of goods and services
+            over time. When prices rise, a unit of currency buys less
+            than it did previously.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-deflation">
+          <dt>Deflation</dt>
+          <dd>
+            A sustained decrease in the general price level. Deflation
+            increases the purchasing power of currency, although it
+            can also discourage spending if players expect prices to
+            continue falling.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-purchasing-power">
+          <dt>Purchasing Power</dt>
+          <dd>
+            The quantity of goods and services that a unit of currency
+            can buy. Purchasing power falls when prices rise relative
+            to the amount of currency held.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-wealth">
+          <dt>Wealth</dt>
+          <dd>
+            The value of the assets held by a player or organisation,
+            minus any liabilities they owe. Wealth differs from income,
+            which measures the flow of earnings received over a period.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-inequality">
+          <dt>Economic Inequality</dt>
+          <dd>
+            Differences in the distribution of income, currency holdings
+            or total wealth between players. Inequality may be measured
+            using wealth shares, income distributions or statistical
+            measures such as the Gini coefficient.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-gini">
+          <dt>Gini Coefficient</dt>
+          <dd>
+            A measure of inequality ranging from 0 to 1, where 0
+            represents perfect equality and 1 represents maximum
+            inequality.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-velocity">
+          <dt>Velocity of Money</dt>
+          <dd>
+            A measure of how frequently currency changes hands during
+            a given period.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="taxation">
+      <h3>Taxation and Production</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-tax">
+          <dt>Tax</dt>
+          <dd>
+            A compulsory payment to the state, collected according to
+            the applicable rules. Taxes may be levied on production,
+            income, wealth, financial returns or other specified activities.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-progressive-tax">
+          <dt>Progressive Taxation</dt>
+          <dd>
+            A tax structure in which higher levels of the taxable
+            activity are subject to higher marginal tax rates. This
+            reduces the tax burden on smaller producers while
+            collecting a greater share from larger producers.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-tax-free-allowance">
+          <dt>Tax-Free Allowance</dt>
+          <dd>
+            The amount of eligible production or income that can be
+            generated without incurring the relevant tax during a
+            specified period.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-marginal-tax-rate">
+          <dt>Marginal Tax Rate</dt>
+          <dd>
+            The tax rate applied to the next unit of taxable production
+            or income. A 100% marginal tax rate means that each
+            additional taxable unit is matched by an equal tax
+            liability under the relevant rules; it does not necessarily
+            mean that all earlier production is taxed at 100%.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-production-limit">
+          <dt>Production Limit</dt>
+          <dd>
+            A threshold used to regulate the amount of currency-generating
+            production. Under the Bank's taxation framework, production
+            above a specified soft limit may face a higher marginal tax
+            rate, potentially reaching 100%.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-tax-revenue">
+          <dt>Tax Revenue</dt>
+          <dd>
+            Currency or other eligible assets collected by the state
+            through taxation during a given period. Tax revenue can
+            fund public expenditure, build reserves and support
+            economic stabilisation.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-tax-base">
+          <dt>Tax Base</dt>
+          <dd>
+            The activity, income or quantity against which a tax is
+            assessed. For example, a meat production tax may use the
+            quantity of eligible Raw Beef produced during a week.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="banking">
+      <h3>Banking and the Treasury</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-central-bank">
+          <dt>Central Bank</dt>
+          <dd>
+            An institution responsible for monetary policy and the
+            management of currency-related operations. The Bank of
+            Mince fulfils this role within the server economy.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-treasury">
+          <dt>Treasury</dt>
+          <dd>
+            The collection of currency, financial claims and other
+            assets held by the state or Bank. Treasury resources may
+            be used for expenditure, lending, debt repayment,
+            stabilisation and strategic investment.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-balance-sheet">
+          <dt>Balance Sheet</dt>
+          <dd>
+            A financial statement recording an institution's assets and
+            liabilities at a particular point in time.
+            Assets are what the Bank owns or is owed; liabilities are
+            what the Bank owes to others.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-assets">
+          <dt>Assets</dt>
+          <dd>
+            Resources or claims with economic value owned or controlled
+            by a player or organisation. For the Bank, these may include
+            currency reserves, loans receivable, bonds held and other
+            strategic holdings.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-liabilities">
+          <dt>Liabilities</dt>
+          <dd>
+            Obligations owed to other parties. A Bank liability may
+            include deposits owed to account holders or outstanding
+            financial obligations under bonds it has issued.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-deposit">
+          <dt>Deposit</dt>
+          <dd>
+            Currency placed with the Bank and recorded as belonging
+            to an account holder. Depending on the account terms,
+            a deposit may earn interest or be used to facilitate
+            transfers and scheduled payments.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-public-expenditure">
+          <dt>Public Expenditure</dt>
+          <dd>
+            Spending by the state or Bank on public projects,
+            government organisations, economic interventions,
+            services or other authorised purposes.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-surplus">
+          <dt>Budget Surplus</dt>
+          <dd>
+            A situation in which the state's income exceeds its
+            expenditure over a defined period. A deficit occurs
+            when expenditure exceeds income.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="bonds">
+      <h3>Bonds and Debt</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-bond">
+          <dt>Bond</dt>
+          <dd>
+            A debt instrument through which an issuer borrows currency
+            from an investor in exchange for a promise to make payments
+            under specified terms. A bond normally states its principal,
+            interest arrangements and maturity date.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-government-bond">
+          <dt>Government Bond</dt>
+          <dd>
+            A bond issued by the state or Central Bank to borrow funds.
+            Government bonds may be used to finance expenditure,
+            attract savings or remove currency from circulation.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-principal">
+          <dt>Principal</dt>
+          <dd>
+            The original amount borrowed or invested, excluding
+            interest. For a bond, the principal is normally the amount
+            repaid at maturity.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-interest">
+          <dt>Interest</dt>
+          <dd>
+            The amount paid for the use of borrowed currency or earned
+            on an eligible financial asset. Interest is calculated
+            according to the applicable rate, principal and period.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-interest-rate">
+          <dt>Interest Rate</dt>
+          <dd>
+            The rate used to calculate interest on a loan, bond,
+            deposit or other financial instrument. Rates should always
+            be interpreted alongside their time period and payment
+            arrangements.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-coupon">
+          <dt>Coupon</dt>
+          <dd>
+            A scheduled interest payment made to the holder of a
+            coupon bond. The coupon amount is determined by the
+            bond's principal, coupon rate and payment schedule.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-coupon-bond">
+          <dt>Coupon Bond</dt>
+          <dd>
+            A bond that pays interest periodically throughout its
+            term, with the principal repaid at maturity. For example,
+            a bond may pay a fixed amount of interest every week
+            until the original principal is returned.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-zero-coupon-bond">
+          <dt>Zero-Coupon Bond</dt>
+          <dd>
+            A bond that makes no periodic coupon payments. Instead,
+            the principal and accumulated interest are paid together
+            at maturity, according to the bond's terms.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-maturity">
+          <dt>Maturity</dt>
+          <dd>
+            The date on which a financial instrument reaches the end
+            of its term. For a bond, maturity is normally when the
+            outstanding principal becomes due for repayment.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-yield">
+          <dt>Yield</dt>
+          <dd>
+            A measure of the return earned on a financial instrument
+            relative to its price or amount invested.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-outstanding-debt">
+          <dt>Outstanding Debt</dt>
+          <dd>
+            The principal amount of debt that has been issued but
+            not yet repaid. It may refer to the Bank's liabilities
+            from issued bonds or to the debts owed by borrowers.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="loans">
+      <h3>Loans and Lending</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-loan">
+          <dt>Loan</dt>
+          <dd>
+            An agreement under which the Bank provides currency to
+            a borrower, who agrees to repay the amount borrowed
+            according to specified terms. A loan may require interest
+            payments, principal repayments or both.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-borrower">
+          <dt>Borrower</dt>
+          <dd>
+            The person, business or organisation that receives a loan
+            and is responsible for meeting its repayment obligations.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-lender">
+          <dt>Lender</dt>
+          <dd>
+            The person or institution providing currency under a
+            loan agreement. In a Bank-issued loan, the Bank is
+            the lender and the recipient is the borrower.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-loan-term">
+          <dt>Loan Term</dt>
+          <dd>
+            The period during which a loan remains in effect,
+            including any scheduled repayment period. The term
+            determines when obligations must be fulfilled under
+            the agreement.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-collateral">
+          <dt>Collateral</dt>
+          <dd>
+            An asset pledged as security for a loan. If the borrower
+            fails to meet the agreement's conditions, the lender may
+            have rights over the collateral as specified in the
+            applicable rules.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-secured-loan">
+          <dt>Secured Loan</dt>
+          <dd>
+            A loan backed by collateral. The collateral provides
+            a potential means of recovering value if the borrower
+            defaults, subject to the loan agreement.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-limited-liability">
+          <dt>Limited Liability Loan</dt>
+          <dd>
+            A loan whose repayment obligations are limited to the
+            borrowing organisation and the assets specified under
+            the agreement. Under the Bank's Charter, eligible business
+            and government loans do not create personal liability
+            for the owners or individuals associated with those
+            organisations.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-default">
+          <dt>Default</dt>
+          <dd>
+            A failure to meet an obligation under a financial
+            agreement, such as missing a required repayment.
+            The consequences depend on the terms of the loan or bond.
+          </dd>
+        </div>
+
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="policy">
+      <h3>Monetary Policy</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-monetary-policy">
+          <dt>Monetary Policy</dt>
+          <dd>
+            The policies and actions used by the Bank to influence
+            monetary conditions, currency supply, borrowing, saving
+            and economic activity. Instruments may include interest
+            rates, taxation and other measures authorised by the Charter.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-base-rate">
+          <dt>Base Interest Rate</dt>
+          <dd>
+            A reference interest rate used by the Bank when setting
+            or assessing other rates, including certain loan rates.
+            Its precise role and value are determined by the Bank's
+            current policy.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-economic-stabilisation">
+          <dt>Economic Stabilisation</dt>
+          <dd>
+            Actions intended to reduce harmful economic fluctuations,
+            address excessive inflation or deflation, and maintain
+            a functioning market for goods and services.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-emergency-measures">
+          <dt>Emergency Monetary Measures</dt>
+          <dd>
+            Temporary interventions authorised under the Charter
+            during severe inflation, economic collapse or monetary
+            instability. These measures must be proportionate to
+            the threat they are intended to address.
+          </dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="glossary-group" id="governance">
+      <h3>Governance and Publications</h3>
+
+      <dl class="glossary-list">
+        <div class="glossary-entry" id="term-governor">
+          <dt>Governor</dt>
+          <dd>
+            The person responsible for overseeing the Bank's daily
+            operations and implementing policy in accordance with
+            the Charter and the current public mandate.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-public-mandate">
+          <dt>Public Mandate</dt>
+          <dd>
+            The broad economic objectives and priorities established
+            through public discussion, summit agreements and other
+            recognised governance mechanisms.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-economic-summit">
+          <dt>Economic Summit</dt>
+          <dd>
+            A meeting open to players for discussing long-term
+            economic goals, reviewing the state of the economy
+            and establishing or revising the public mandate.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-audit">
+          <dt>Audit</dt>
+          <dd>
+            An inspection of financial records, currency holdings,
+            production or relevant activities to verify information,
+            support taxation and investigate suspected fraud or
+            undeclared reserves.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-economic-report">
+          <dt>Economic Report</dt>
+          <dd>
+            The Bank's regular publication describing economic
+            conditions, monetary developments, treasury affairs,
+            financial obligations and other relevant statistics
+            for a defined reporting period.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-meeting-minutes">
+          <dt>Meeting Minutes</dt>
+          <dd>
+            The formal written record of a meeting, documenting
+            relevant discussions, decisions, motions and agreed
+            actions. Minutes provide an official reference for
+            future policy and governance decisions.
+          </dd>
+        </div>
+
+        <div class="glossary-entry" id="term-research-paper">
+          <dt>Research Paper</dt>
+          <dd>
+            A publication examining a particular economic question,
+            policy proposal or financial mechanism in greater depth.
+            Research papers may inform future decisions but do not
+            automatically constitute adopted Bank policy.
+          </dd>
+        </div>
+      </dl>
+    </div>
   </section>
 </BaseLayout>
