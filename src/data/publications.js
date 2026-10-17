@@ -11,19 +11,12 @@ export const economicReports = [
 
 export const meetingMinutes = [
   {
-    id: "economic-summit-minutes-2026-10-10",
-    date: "2026-10-10",
-    category: "Test Meeting Minutes",
-    title: "Economic Summit Minutes",
-    url: "/reports/meeting-minutes-format.pdf",
-  },
-  {
-    id: "economic-summit-minutes-2026-10-11",
-    date: "2026-10-11",
-    category: "Test Meeting Minutes",
-    title: "Economic Summit Minutes",
-    url: "/reports/meeting-minutes-format.pdf",
-  },
+    id: "economic-summit-minutes-2026-10-15",
+    date: "2026-10-15",
+    category: "Economic Summit Minutes",
+    title: "October 2026 Economic Summit Minutes",
+    url: "/reports/October2026SummitMinutes.pdf",
+  }
 ];
 
 export const researchPapers = [

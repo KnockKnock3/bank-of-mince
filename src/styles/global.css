@@ -1,5 +1,5 @@
 :root {
-  --green: #173f35;
+  --green: #174036;
   --green-light: #245749;
   --gold: #c5a45d;
   --paper: #f7f6f0;
@@ -457,3 +457,80 @@ main.container {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Preserve line breaks in announcement summaries and full text */
+.announcement-summary,
+.announcement-content p {
+  white-space: pre-line;
+}
+
+/* Expand/collapse button */
+.announcement-toggle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.55rem 0.9rem;
+
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 4px;
+
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.announcement-toggle:hover {
+  background: var(--green);
+  color: white;
+}
+
+.announcement-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.announcement-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.announcement-content p {
+  margin-bottom: 0;
+  line-height: 1.75;
+}
+
+
+/* .governor-statement {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--surface, #f8f8f5);
+  border-radius: 0 6px 6px 0;
+}
+
+.governor-statement blockquote {
+  margin: 1rem 0;
+  color: var(--text, #30352f);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+.governor-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 1.25rem 2.5rem 0;
+}
+
+.governor-signature span {
+  color: var(--muted);
+  font-size: 0.9rem;
+} */

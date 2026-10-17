@@ -33,39 +33,80 @@ import { currentPolicies, announcements } from "../data/policy.js";
     </div>
   </section>
 
-  <section class="section" id="announcements">
-    <p class="eyebrow">OFFICIAL RECORD</p>
-    <h2>Announcements &amp; statements</h2>
-    <p class="muted">
-      A record of policy announcements and official statements
-      issued by the Bank.
-    </p>
+  
+<section class="section" id="announcements">
+  <p class="eyebrow">OFFICIAL RECORD</p>
+  <h2>Announcements &amp; statements</h2>
+  <p class="muted">
+    A record of policy announcements and official statements
+    issued by the Bank.
+  </p>
 
-    <div class="announcement-feed">
-      {announcements.map((announcement) => (
-        <article
-          class="card announcement"
-          id={announcement.id}
-        >
-          <div class="announcement-meta">
-            <span class="announcement-category">
-              {announcement.category}
-            </span>
-            <time>{announcement.date}</time>
-          </div>
+  <div class="announcement-feed">
+    {announcements.map((announcement) => (
+      <article
+        class="card announcement"
+        id={announcement.id}
+      >
+        <div class="announcement-meta">
+          <span class="announcement-category">
+            {announcement.category}
+          </span>
+          <time>{announcement.date}</time>
+        </div>
 
-          <h3>{announcement.title}</h3>
-          <p>{announcement.summary}</p>
+        <h3>{announcement.title}</h3>
 
-          {announcement.content !== announcement.summary && (
-            <div class="announcement-content">
-              <p>{announcement.content}</p>
-            </div>
+        <p class="announcement-summary">{announcement.summary}</p>
+
+        {announcement.content &&
+          announcement.content !== announcement.summary && (
+            <>
+              <button
+                class="announcement-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls={`announcement-content-${announcement.id}`}
+                data-announcement-toggle
+              >
+                Read full announcement
+              </button>
+
+              <div
+                class="announcement-content"
+                id={`announcement-content-${announcement.id}`}
+                hidden
+              >
+                <p>{announcement.content}</p>
+              </div>
+            </>
           )}
-        </article>
-      ))}
-    </div>
-  </section>
+      </article>
+    ))}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll("[data-announcement-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const contentId = button.getAttribute("aria-controls");
+      const content = contentId
+        ? document.getElementById(contentId)
+        : null;
+
+      if (!content) return;
+
+      const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+      content.hidden = isExpanded;
+      button.setAttribute("aria-expanded", String(!isExpanded));
+      button.textContent = isExpanded
+        ? "Read full announcement"
+        : "Show less";
+    });
+  });
+</script>
+
 
   <section class="section" id="official-documents">
     <p class="eyebrow">GOVERNANCE</p>
